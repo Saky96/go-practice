@@ -22,7 +22,7 @@ func (u *User) ClearUserName() { // Passing pointer in this case so that the sam
 	u.lastName = ""
 }
 
-func NewCreateUser(firstName, lastName, birthdate string) User { //Constructor Function in go
+func New(firstName, lastName, birthdate string) User { //Constructor Function in go with name 'New'
 	return User{
 		firstName: firstName,
 		lastName:  lastName,

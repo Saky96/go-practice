@@ -30,7 +30,7 @@ func main() {
 	// userData.outputUserDataStructMethod()
 	appUser.OutputUserDataStructMethod()
 
-	userData2 := user.NewCreateUser(
+	userData2 := user.New(
 		"Shaurya",
 		"Saigal",
 		"17/02/2004",
