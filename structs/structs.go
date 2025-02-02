@@ -1,7 +1,9 @@
 package main
 
 import (
+	"example/structs/admin"
 	"example/structs/user"
+	"fmt"
 )
 
 func main() {
@@ -28,22 +30,33 @@ func main() {
 	// outputUserDataUsingPointer(&userData) // pointer to structs are passed
 	// userData.clearUserName()
 	// userData.outputUserDataStructMethod()
-	appUser.OutputUserDataStructMethod()
+	//appUser.OutputUserDataStructMethod()
 
-	userData2 := user.New(
-		"Shaurya",
-		"Saigal",
-		"17/02/2004",
+	//userData2 := user.New(
+	//	"Shaurya",
+	//	"Saigal",
+	//	"17/02/2004",
+	//)
+	//
+	//userData2.OutputUserDataStructMethod()
+	//
+	//userData3 := user.NewCreateUserPointer(
+	//	"avi",
+	//	"Saigal",
+	//	"22/11/2005",
+	//)
+	//
+	//userData3.OutputUserDataStructMethod()
+
+	adminPointer := admin.NewAdmin(
+		"admin@email.com",
+		"*****",
+		*appUser,
 	)
 
-	userData2.OutputUserDataStructMethod()
+	adminValue := *adminPointer
 
-	userData3 := user.NewCreateUserPointer(
-		"avi",
-		"Saigal",
-		"22/11/2005",
-	)
-
-	userData3.OutputUserDataStructMethod()
+	fmt.Println(adminValue.Email())
+	adminPointer.OutputUserDataStructMethod()
 
 }
