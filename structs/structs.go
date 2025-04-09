@@ -112,7 +112,7 @@ func noteMain() {
 	note1.DisplayNote()
 	fmt.Println("Saving the note!")
 	fileErr := note1.SaveNote()
-	if err != nil {
+	if fileErr != nil {
 		fmt.Println(fileErr)
 		//return err
 	}
