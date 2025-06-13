@@ -1,14 +1,14 @@
 package main
 
 import (
-	"example/arrays/exercises"
 	"fmt"
+	"strconv"
 )
 
 func main() {
 
-	//arrayBasics()
-	exercises.Exe1()
+	arrayBasics()
+	//exercises.Exe1()
 }
 
 func arrayBasics() {
@@ -26,4 +26,8 @@ func arrayBasics() {
 
 	productNames = append(productNames, "Jabba")
 	fmt.Println(productNames)
+
+	for index, value := range productNames {
+		fmt.Println("index: "+strconv.Itoa(index), "value: "+value)
+	}
 }
